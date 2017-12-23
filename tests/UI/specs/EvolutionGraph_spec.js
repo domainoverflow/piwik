@@ -66,7 +66,7 @@ describe("EvolutionGraph", function () {
     });
 
     it("should show graph as image when export as image icon clicked", function (done) {
-        expect.screenshot('export_image').to.be.capture(function (page) {
+        expect.screenshot('export_image').to.be.captureSelector('.ui-dialog', function (page) {
             page.click('#dataTableFooterExportAsImageIcon');
         }, done);
     });
